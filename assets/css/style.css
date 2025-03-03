@@ -1248,7 +1248,7 @@ form .button-area {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transform: translateY(0);
-  opacity: 0;
+  opacity: 1;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -1284,7 +1284,7 @@ form .button-area {
 
 .project-card:hover {
   transform: translateY(-10px);
-  opacity: 1;
+
 }
 
 .project-card:hover img {
