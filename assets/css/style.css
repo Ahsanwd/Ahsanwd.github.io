@@ -1331,7 +1331,7 @@ form .button-area {
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
-  background-color: #007bff;
+  background-color: red;
   border: none;
   border-radius: 30px;
   text-transform: uppercase;
