@@ -1324,3 +1324,65 @@ form .button-area {
     opacity: 1;
   }
 }
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  text-decoration: none;
+}
+
+.btn i {
+  margin-left: 8px;
+}
+
+/* Hover Effect */
+.btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 5px 20px rgba(0, 86, 179, 0.4);
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+/* Active/Clicked Button Effect */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Focus Effect */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Add more button color variations */
+.btn.secondary {
+  background-color: #28a745;
+}
+
+.btn.secondary:hover {
+  background-color: #218838;
+}
+
+/* Button with Outline */
+.btn.outline {
+  color: #007bff;
+  background-color: transparent;
+  border: 2px solid #007bff;
+}
+
+.btn.outline:hover {
+  background-color: #007bff;
+  color: #fff;
+}
