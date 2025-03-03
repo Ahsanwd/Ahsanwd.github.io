@@ -1330,7 +1330,7 @@ form .button-area {
   padding: 12px 25px;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #fff;
+  color: #fff; !important;
   background-color: red;
   border: none;
   border-radius: 30px;
