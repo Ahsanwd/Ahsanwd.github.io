@@ -1229,3 +1229,98 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+/* Projects Section Styling */
+.projects {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.projects .heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  position: relative;
+  margin: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card .project-info {
+  padding: 20px;
+  background-color: #fff;
+  border-top: 2px solid #f1f1f1;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.project-card a {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Animating the cards into view */
+.projects .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.project-card:nth-child(2) {
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+.project-card:nth-child(3) {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.project-card:nth-child(4) {
+  animation: fadeInUp 0.9s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
