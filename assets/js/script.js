@@ -38,7 +38,7 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-   document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     emailjs.init("EkJctoEf_MvTRvoP4"); // Replace with your Public Key
 
     document.getElementById("contact-form").addEventListener("submit", function (event) {
@@ -62,6 +62,7 @@ $(document).ready(function () {
         });
     });
 });
+
 
     // <!-- emailjs to mail contact form data -->
 
