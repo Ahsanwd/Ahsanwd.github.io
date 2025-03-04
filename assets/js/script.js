@@ -38,34 +38,39 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
- document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("EkJctoEf_MvTRvoP4"); // Public Key
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form from reloading the page
+    // Get form values
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
 
-        // Get form values
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        let subject = document.getElementById("subject").value;
-        let message = document.getElementById("message").value;
+    // Check if fields are empty
+    if (!name || !email || !subject || !message) {
+        document.getElementById("response").innerHTML = "⚠️ Please fill in all fields.";
+        document.getElementById("response").style.color = "red";
+        return;
+    }
 
-        // Send email
-        emailjs.send("service_bb7jtpe", "template_zxh55th", {
-            from_name: name,
-            from_email: email,
-            subject: subject,
-            message: message
-        })
-        .then(function(response) {
-            document.getElementById("response").innerHTML = "✅ Email Sent Successfully!";
-        }, function(error) {
-            document.getElementById("response").innerHTML = "❌ Email Failed! Try Again.";
-        });
-
-        // Clear form fields
-        document.getElementById("contact-form").reset();
-    });
+    // Send email using EmailJS
+    emailjs.send("service_bb7jtpe", "template_zxh55th", {
+        from_name: name,
+        email: email,
+        subject: subject,
+        message: message
+    }).then(
+        function(response) {
+            document.getElementById("response").innerHTML = "✅ Message sent successfully!";
+            document.getElementById("response").style.color = "green";
+            document.getElementById("contact-form").reset(); // Clear form after success
+        },
+        function(error) {
+            document.getElementById("response").innerHTML = "❌ Failed to send message. Try again!";
+            document.getElementById("response").style.color = "red";
+        }
+    );
 });
 
 
