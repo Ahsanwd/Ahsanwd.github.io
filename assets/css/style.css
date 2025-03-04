@@ -1232,46 +1232,60 @@ header .navbar ul li a:hover {
 }
 
 /*Contact */
-.contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
-
-.contact-container {
-    background: white;
+/* Contact Section Styles */
+.contact {
+    max-width: 400px;
+    margin: 50px auto;
     padding: 20px;
-    border-radius: 10px;
+    background: white;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
     text-align: center;
 }
 
-.contact-container h2 {
-    margin-bottom: 10px;
+.contact h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
 }
 
-.contact-container input,
-.contact-container textarea {
+.contact input,
+.contact textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-.contact-container button {
-    background-color: #28a745;
+.contact textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
     color: white;
     border: none;
-    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
     cursor: pointer;
-    width: 100%;
+    transition: background 0.3s;
 }
 
-.contact-container button:hover {
-    background-color: #218838;
+.contact button:hover {
+    background: #218838;
 }
+
+#response {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+
 
