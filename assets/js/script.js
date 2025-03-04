@@ -38,30 +38,36 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-  document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("EkJctoEf_MvTRvoP4"); // Replace with your Public Key
+ document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("EkJctoEf_MvTRvoP4"); // Public Key
 
     document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent form from reloading the page
 
-        // Collect input values
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+        // Get form values
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let subject = document.getElementById("subject").value;
+        let message = document.getElementById("message").value;
 
-        // Send email using EmailJS
+        // Send email
         emailjs.send("service_bb7jtpe", "template_zxh55th", {
             from_name: name,
             from_email: email,
+            subject: subject,
             message: message
         })
-        .then(function (response) {
-            document.getElementById("status").innerHTML = "✅ Email Sent Successfully!";
-        }, function (error) {
-            document.getElementById("status").innerHTML = "❌ Failed to Send Email!";
+        .then(function(response) {
+            document.getElementById("response").innerHTML = "✅ Email Sent Successfully!";
+        }, function(error) {
+            document.getElementById("response").innerHTML = "❌ Email Failed! Try Again.";
         });
+
+        // Clear form fields
+        document.getElementById("contact-form").reset();
     });
 });
+
 
 
     // <!-- emailjs to mail contact form data -->
