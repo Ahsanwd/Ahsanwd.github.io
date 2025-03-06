@@ -103,13 +103,23 @@ var typed = new Typed(".typing-text", {
 // <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
-    let response
-    type === "skills" ?
-        response = await fetch("skills.json")
-      
-    const data = await response.json();
-    return data;
+    let response;
+
+    if (type === "skills") {
+        response = await fetch("skills.json");
+    } else {
+        return null; // Handle other cases if needed
+    }
+
+    if (response) {
+        const data = await response.json();
+        return data;
+    } else {
+        console.error("Failed to fetch data.");
+        return null;
+    }
 }
+
 
 function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
