@@ -82,7 +82,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | KIRAN KUMAR U";
+            document.title = "Portfolio | Ahsa Ali";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
